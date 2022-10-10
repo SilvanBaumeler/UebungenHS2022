@@ -1,0 +1,19 @@
+html {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#date {
+    position: relative;
+    font-size: 30px;
+}   
+#time {
+    position: relative;
+    font-size: 30px;
+}
+
