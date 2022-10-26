@@ -8,7 +8,7 @@ var timer = ""
 class Timer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {time: timer, render: true}
+        this.state = {time: timer, render: true}    // Render --> laufendes aktualisieren
         this.updateTime = this.updateTime.bind(this);
         this.buttonclicked = this.buttonclicked.bind(this);
     }
