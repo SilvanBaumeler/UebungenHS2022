@@ -4,6 +4,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 d={}
+#g={} wäre richtiger ansatz gewesen
 
 file = open("PLZO_CSV_LV95.csv", encoding="utf-8")
 next(file)
