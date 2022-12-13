@@ -35,7 +35,8 @@ manager.cookie_name = "ch.fhnw.testapp_hezd736asdfraietfdgkaetjaseg"
 
 #################################################################### Login
 
-DB = {"user1": {"name": "Hans Muster", 
+DB = {"user1": {
+                "name": "Hans Muster", 
                 "email": "hanswurst@gmail.com",
                 "password": "12345",
                 "username": "user1"},
@@ -103,6 +104,7 @@ async def read_notes():
     query = notes.select()
     return await database.fetch_all(query)
 
+
 @app.get("/new")
 async def create_note(request: Request):
     return templates.TemplateResponse('form_uebung.html', context={'request': request})
@@ -113,7 +115,7 @@ async def post_note(titel=Form(), text=Form()):
     myid = await database.execute(query)
     return {"id": myid, "titel": titel, "text": text}
 
-@app.get(f"""/users/user1""")
+@app.get("/users/user1")
 async def read_notes():
     query = notes.select().where(notes.c.user == "user1")
     return await database.fetch_all(query)
